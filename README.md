@@ -1,4 +1,4 @@
-# Blog App Development (Frontend->React, Backend-> Laravel) 
+# Blog App Frontend Development 
 This Blog development application is built using 
 - React (Hooks such as useState, useEffect, useContext and useParams)
 - Vite
