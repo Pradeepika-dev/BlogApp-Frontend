@@ -13,7 +13,7 @@ Application provides below functionalities.
   </ul>
      
 # Project Setup
-  - Clone the project folder by running "git clone "            
+  - Clone the project folder by running "git clone https://github.com/Pradeepika-dev/BlogApp-Frontend.git"            
   - In the project directory, run " npm install" and "npm start"
   - Application will be opened on http://localhost:3000 in the browser 
 
