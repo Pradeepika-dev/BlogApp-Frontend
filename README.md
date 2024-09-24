@@ -1,8 +1,4 @@
-# Blog App Frontend Development 
-This Blog development application is built using 
-- React (Hooks such as useState, useEffect, useContext and useParams)
-- Vite
-- Tailwind CSS
+# Blog App Frontend Development (React + Vite + Tailwind CSS)
 
 Application provides below functionalities.
 <ul>
@@ -13,7 +9,7 @@ Application provides below functionalities.
   </ul>
      
 # Project Setup
-  - Clone the project folder by running "git clone https://github.com/Pradeepika-dev/BlogApp-Frontend.git"            
+  - Clone the project folder by running "git clone https://github.com/Pradeepika-dev/BlogApp-Frontend.git" to your working space            
   - In the project directory, run " npm install" and "npm start"
   - Application will be opened on http://localhost:3000 in the browser 
 
