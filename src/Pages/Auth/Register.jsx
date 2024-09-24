@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../Context/AppContext";
+import Swal from "sweetalert2";
 
 export default function Register() {
 
@@ -38,8 +39,13 @@ export default function Register() {
           localStorage.setItem("token", data.results.token);
           setToken(data.results.token);
           // TODO: redirect to home page
+          
+          Swal.fire({
+            title: "Success",
+            text: "User has been registered successfully.",
+            icon: "success"
+          });
           navigate("/");
-          // console.log(data.results.token);
         }        
      };
 
