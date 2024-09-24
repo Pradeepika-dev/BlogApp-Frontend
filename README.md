@@ -1,8 +1,19 @@
-# React + Vite
+# Blog App Frontend Development (React + Vite + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application provides below functionalities.
+<ul>
+    <li class='circle'>User Authentication including Register, Login and Logout.</li>
+    <li class='circle'>Blog post adding, updating, and deleting.</li>
+    <li class='circle'>Updating and deleting can be done by only post owners.</li>
+    <li class='circle'>All users can view blog post listing and individual blog post details.</li>
+  </ul>
 
-Currently, two official plugins are available:
+  ![image](https://github.com/user-attachments/assets/1fd6e5ce-16ec-4ca9-bd62-7252d8d374ad)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+     
+# Project Setup
+  - Clone the project folder by running "git clone https://github.com/Pradeepika-dev/BlogApp-Frontend.git" to your working space
+  - In the project directory, run " npm install" and "npm start"
+  - Application will be opened on http://localhost:3000 in the browser 
+
+
