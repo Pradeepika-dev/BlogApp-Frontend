@@ -1,8 +1,20 @@
-# React + Vite
+# Blog App Development (Frontend->React, Backend-> Laravel) 
+This Blog development application is built using 
+- React (Hooks such as useState, useEffect, useContext and useParams)
+- Vite
+- Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application provides below functionalities.
+<ul>
+    <li class='circle'>User Authentication including Register, Login and Logout.</li>
+    <li class='circle'>Blog post adding, updating, and deleting.</li>
+    <li class='circle'>Updating and deleting can be done by only post owners.</li>
+    <li class='circle'>All users can view blog post listing and individual blog post details.</li>
+  </ul>
+     
+# Project Setup
+  - Clone the project folder by running "git clone "            
+  - In the project directory, run " npm install" and "npm start"
+  - Application will be opened on http://localhost:3000 in the browser 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
