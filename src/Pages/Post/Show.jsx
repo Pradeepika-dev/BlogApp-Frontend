@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../../Context/AppContext";
+import Swal from "sweetalert2";
+
 
 export default function Show() {
 
@@ -22,21 +24,36 @@ export default function Show() {
         }
     }
 
-    async function handleDelete(e) {
+     function handleDelete(e) {
         e.preventDefault();
-        // TODO: Delete post from the API, if the user is the owner of the post
-        if(user.id === post.user_id) { 
-            const res = await fetch(`/api/posts/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Authorization': `Bearer ${token}`
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                // TODO: Delete post from the API, if the user is the owner of the post
+                if(user.id === post.user_id) { 
+                    const res =  fetch(`/api/posts/${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your post has been deleted.",
+                        icon: "success"
+                      });
+                    navigate('/')
                 }
-            });
-        
-            if (res.ok) {
-                navigate('/')
-            }    
-        } 
+              
+            }
+          });
     }
 
     // TODO: Fetching post from the API when the component mounts
@@ -47,7 +64,7 @@ export default function Show() {
     return <>
         {post ? (
             <div key={post.id}
-                className="mt-4 p-4 border rounded-md border-dashed border-slate-400">
+                className="mt-4 p-4 border rounded-md border-dashed border-slate-800">
                 <div className="mb-4 flex justify-between items-start">
                     <div>
                         <h2 className="text-2xl font-bold">{post.title}</h2>
@@ -61,7 +78,7 @@ export default function Show() {
                 {user && user?.id === post.user.id &&
 
                     <div className="flex items-center justify-end mt-4">
-                        <Link to={`/posts/update/${post.id}`} className="bg-green-500 text-white px-3 py-1 rounded-md text-sm">
+                        <Link to={`/posts/update/${post.id}`} className="bg-green-500 text-white px-3 py-1 rounded-md text-sm mr-3">
                             Update
                         </Link>
                         <form onSubmit={handleDelete}>

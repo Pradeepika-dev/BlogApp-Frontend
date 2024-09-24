@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import { AppContext } from "../../Context/AppContext"
 import { useNavigate } from "react-router-dom"
+import Swal from "sweetalert2"
 
 export default function Create() {
     const navigate = useNavigate()
@@ -27,6 +28,11 @@ export default function Create() {
         if (data.errors) {
             setErrors(data.errors)
         } else {
+            Swal.fire({
+                title: "Success",
+                text: "Your post has been created.",
+                icon: "success"
+              });
             navigate('/')
         }
     }

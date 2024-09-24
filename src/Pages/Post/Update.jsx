@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../../Context/AppContext"
 import { useNavigate, useParams } from "react-router-dom"
+import Swal from "sweetalert2"
 
 export default function Update() {
     const navigate = useNavigate()
@@ -49,6 +50,11 @@ export default function Update() {
         if (data.errors) {
             setErrors(data.errors)
         } else {
+            Swal.fire({
+                title: "Success",
+                text: "Your post has been updated.",
+                icon: "success"
+              });
             navigate('/')
         }
         console.log(data);
